@@ -1,0 +1,292 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+header {
+  padding: 10px;
+}
+.logo {
+  padding: 15px 20px;
+  margin-right: auto;
+  height: auto;
+  width: 80px;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+#menu-toggle {
+  display: none;
+}
+.menu-icon {
+  display: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.contact a {
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+}
+.nav-links a:hover {
+  color: red;
+}
+main {
+  display: flex;
+  flex-direction: column;
+}
+#hero-image {
+  position: relative;
+  overflow: hidden;
+}
+#hero-image img {
+  width: 100%;
+  height: 50vh;
+  opacity: 0.2;
+  border-radius: 5px;
+  object-fit: cover;
+}
+.center-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+.center-text p {
+  padding: 10px;
+}
+button {
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  margin: 20px;
+  padding: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+button:hover {
+  background-color: blue;
+  transform: translateY(-2px);
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+.panel-img-container {
+  display: flex;
+  background-color: #d1e9f0;
+  width: 100%;
+  gap: 20px;
+  padding: 20px;
+}
+.panel img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+  border-radius: 15px;
+}
+.panel {
+  flex: 1;
+  opacity: 0.8;
+}
+.grid-icon-heading {
+  margin: 10px;
+  padding: 10px;
+}
+.grid-icon-heading h2 {
+  margin-bottom: 5px;
+}
+.grid-icon-feature {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 10px;
+  gap: 30px;
+}
+.card {
+  padding: 10px;
+}
+.card p {
+  padding: 10px;
+  margin-left: 20px;
+}
+.card-title {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+.info-icon {
+  flex-shrink: 0;
+  font-size: 18px;
+  margin-top: 2px;
+}
+.testimonial-container {
+  background-color: #d1e9f0;
+}
+.testimonial-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 30px;
+  gap: 30px;
+}
+.testimonial-heading {
+  padding: 20px;
+}
+.testimonial-heading h3 {
+  margin-bottom: 5px;
+}
+.test {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  box-shadow: 5px 10px black;
+}
+.test:hover {
+  transform: translateY(-10px);
+}
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+.profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.footer-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 10px;
+}
+.logo-footer {
+  width: 30px;
+}
+.social-media-links {
+  margin-top: 5px;
+  cursor: pointer;
+}
+.social-media-links a:hover i {
+  color: blue;
+}
+.footer-section h4 {
+  margin-bottom: 12px;
+}
+.fa {
+  font-size: 10px;
+  width: 50px;
+  text-decoration: none;
+}
+.fa-facebook {
+  color: black;
+}
+.course-section p {
+  margin-bottom: 5px;
+}
+.shop-section p {
+  margin-bottom: 5px;
+}
+iframe {
+  width: 100%;
+  height: 30vh;
+  margin-right: 0px;
+}
+.footer-section > div {
+  flex: 1;
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+  .logo {
+    position: relative;
+    z-index: 1000;
+  }
+  .nav-links {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    z-index: 999;
+  }
+  .menu-icon {
+    display: block;
+    font-size: 28px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1000;
+  }
+  #menu-toggle:checked ~ .nav-links {
+    display: flex;
+  }
+  #hero-image img {
+    height: 50vh;
+  }
+  .panel-img-container {
+    flex-direction: column;
+  }
+  .panel {
+    width: 100%;
+  }
+  .grid-icon-feature {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+  }
+  .testimonial-section {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .card,
+  .test {
+    padding: 15px;
+  }
+  .footer-section {
+    display: block;
+  }
+  .footer-links {
+    display: flex;
+    justify-content: space-between;
+  }
+  .about-section,
+  .course-section,
+  .shop-section {
+    margin: 20px;
+  }
+  .map-route {
+    width: 100%;
+    margin: 15px 0;
+  }
+}
